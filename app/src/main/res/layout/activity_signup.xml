@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grayBackground"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="98dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="15sp"
+            app:srcCompat="@drawable/whatsapp" />
+
+        <EditText
+            android:id="@+id/editname"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="28sp"
+            android:layout_marginRight="28sp"
+            android:layout_marginBottom="10sp"
+            android:background="@color/lightGrey"
+            android:ems="10"
+            android:hint="Your Name"
+            android:inputType="textPersonName"
+            android:paddingLeft="13sp" />
+
+        <EditText
+            android:id="@+id/editemail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="28sp"
+            android:layout_marginRight="28sp"
+            android:layout_marginBottom="10sp"
+            android:background="@color/lightGrey"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName|textEmailAddress"
+            android:paddingLeft="13sp" />
+
+        <EditText
+            android:id="@+id/editpassword"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="28sp"
+            android:layout_marginRight="28sp"
+            android:layout_marginBottom="10sp"
+            android:background="@color/lightGrey"
+            android:ems="10"
+            android:hint="Pasword"
+            android:inputType="textPersonName|textPassword"
+            android:paddingLeft="13sp" />
+
+        <TextView
+            android:id="@+id/tvAlreadyaccount"
+            android:layout_width="165dp"
+            android:layout_height="48dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:text="Already have An Account"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnsignup"
+            android:layout_width="126dp"
+            android:layout_height="57dp"
+            android:layout_marginBottom="10sp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="Sign Up"
+            app:cornerRadius="10sp" />
+
+        <LinearLayout
+            android:layout_width="345dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="15sp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btngoogle"
+                android:layout_width="152dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:text="Google"
+                android:textColor="@color/black"
+                app:cornerRadius="8sp" />
+
+            <Button
+                android:id="@+id/btnfb"
+                android:layout_width="152dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="15sp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/fb_color"
+                android:text="Facebook"
+                app:cornerRadius="8sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvsignupphone"
+            android:layout_width="273dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="SignUp With Phone"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

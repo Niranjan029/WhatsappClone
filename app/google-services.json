@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "589943379842",
+    "project_id": "whatsapplite-c40e8",
+    "storage_bucket": "whatsapplite-c40e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589943379842:android:d309f6a572083afa10219b",
+        "android_client_info": {
+          "package_name": "com.example.whatsapplite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589943379842-85ac7g0cnvgrh82m56494d2vphibs39j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZGaOnbooTyvj1vzDA-9D1QfJjeP_bDc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589943379842-85ac7g0cnvgrh82m56494d2vphibs39j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
