@@ -14,6 +14,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.whatsapplite.ChatdetailActivity;
 import com.example.whatsapplite.R;
 import com.example.whatsapplite.Users.Users;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -41,15 +46,37 @@ Context context ;
       Picasso.get().load(users.getProfilepic()).placeholder(R.drawable.profile).into(holder.image);
       holder.userName.setText(users.getUsername());
 
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+          database.getReference().child("chats")
+                .child(FirebaseAuth.getInstance().getUid() + users.getUserid()).orderByChild("timestamp")
+                          .limitToLast(1).addListenerForSingleValueEvent(new ValueEventListener() {
+                      @Override
+                      public void onDataChange(@NonNull DataSnapshot snapshot) {
+                          if(snapshot.hasChildren())
+                          {
+                              for(DataSnapshot snapshot1 : snapshot.getChildren())
+                              {
+                                  holder.lastMessage.setText(snapshot1.child("message").getValue(String.class));
+                              }
+                          }
+                      }
+
+                      @Override
+                      public void onCancelled(@NonNull DatabaseError error) {
+
+                      }
+                  });
+
+
       holder.itemView.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
               Intent intent = new Intent(context, ChatdetailActivity.class);
-              intent.putExtra("userId",users.getUserid());
+              intent.putExtra("userId",users.getUserid()) ;
               intent.putExtra("ProfilePic",users.getProfilepic());
               intent.putExtra("UserName",users.getUsername());
              context.startActivity(intent);
-
           }
       });
 

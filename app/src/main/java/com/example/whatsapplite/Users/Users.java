@@ -21,9 +21,11 @@ public class Users {
         this.username = username;
     }
 
+
     public String getUserid() {
-        return userid;
+        return userid ;
     }
+
     public void setUserid(String userid) {
         this.userid = userid;
     }
@@ -62,4 +64,6 @@ public class Users {
     public String getUsername() {
         return username;
     }
+
+
 }
