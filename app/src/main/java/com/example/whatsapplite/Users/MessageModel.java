@@ -1,7 +1,8 @@
 package com.example.whatsapplite.Users;
 
 public class MessageModel {
-    String uid,message ;
+    String uid,message ,messageId ;
+
     Long Timestamp ;
 
     public MessageModel(String uid, String message) {
@@ -15,6 +16,14 @@ public class MessageModel {
         Timestamp = timestamp;
     }
     public MessageModel(){}
+
+    public String getMessageId() {
+        return messageId;
+    }
+
+    public void setMessageId(String messageId) {
+        this.messageId = messageId;
+    }
 
     public String getUid() {
         return uid;

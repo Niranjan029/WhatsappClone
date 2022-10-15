@@ -62,7 +62,7 @@ public class ChatdetailActivity extends AppCompatActivity {
             }
         });
         final ArrayList<MessageModel> messageModel = new ArrayList<>();
-        final ChatAdapter chatadapter = new ChatAdapter(messageModel, this);
+        final ChatAdapter chatadapter = new ChatAdapter(messageModel, this,receiverid);
         binding.ChatDetailRecyclerView.setAdapter(chatadapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         binding.ChatDetailRecyclerView.setLayoutManager(layoutManager);
@@ -75,7 +75,9 @@ public class ChatdetailActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 messageModel.clear();
                 for (DataSnapshot snapshot1 : snapshot.getChildren()) {
+
                     MessageModel model = snapshot1.getValue(MessageModel.class);
+                    model.setMessageId(snapshot1.getKey() );
                     messageModel.add(model);
                 }
 
@@ -94,20 +96,24 @@ public class ChatdetailActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 String message = binding.etMessage.getText().toString();
-                final MessageModel model = new MessageModel(senderId, message);
-                model.setTimestamp(new Date().getTime());
-                binding.etMessage.setText("");
-                database.getReference().child("chats").child(SenderRoom).push().setValue(model).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        database.getReference().child("chats").child(ReceiverRoom).push().setValue(model).addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void unused) {
-                                //Toast.makeText(ChatdetailActivity.this, "message sent", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                    }
-                });
+
+                if (!message.isEmpty()) {
+
+                    final MessageModel model = new MessageModel(senderId, message);
+                    model.setTimestamp(new Date().getTime());
+                    binding.etMessage.setText("");
+                    database.getReference().child("chats").child(SenderRoom).push().setValue(model).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            database.getReference().child("chats").child(ReceiverRoom).push().setValue(model).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    //Toast.makeText(ChatdetailActivity.this, "message sent", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
+                    });
+                }
             }
         });
 

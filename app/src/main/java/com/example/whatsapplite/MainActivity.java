@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menulogout:SignOut();
             return true ;
             case R.id.settings:
-                Toast.makeText(this, "Setting pressed", Toast.LENGTH_SHORT).show();;
+                startActivity(new Intent(this,SettingsActivity.class));
                 return true ;
             default:
                 return false;

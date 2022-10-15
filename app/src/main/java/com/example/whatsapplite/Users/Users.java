@@ -1,16 +1,18 @@
 package com.example.whatsapplite.Users;
 
 public class Users {
-    String profilepic ,email,password,userid,username ;
+    String profilepic ,email,password,userid,username , about ;
 
-    public Users(String email, String password, String username, String userid, String profilepic) {
+    public Users(String profilepic, String email, String password, String userid, String username, String about) {
         this.profilepic = profilepic;
         this.email = email;
         this.password = password;
         this.userid = userid;
         this.username = username;
+        this.about = about;
     }
-  public Users(){}
+
+    public Users(){}
 
 
 // constructor for signup
@@ -21,6 +23,13 @@ public class Users {
         this.username = username;
     }
 
+    public String getAbout() {
+        return about ;
+    }
+
+    public void setAbout(String about) {
+        this.about = about;
+    }
 
     public String getUserid() {
         return userid ;

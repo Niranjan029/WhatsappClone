@@ -90,6 +90,7 @@
                 android:layout_marginLeft="15sp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/white"
+                android:drawableLeft="@drawable/google"
                 android:text="Google"
                 android:textColor="@color/black"
                 app:cornerRadius="8sp" />
@@ -102,6 +103,7 @@
                 android:layout_marginRight="15sp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/fb_color"
+                android:drawableLeft="@drawable/facebook"
                 android:text="Facebook"
                 app:cornerRadius="8sp" />
         </LinearLayout>

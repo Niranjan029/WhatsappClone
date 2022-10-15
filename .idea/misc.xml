@@ -5,10 +5,15 @@
       <map>
         <entry key="app/src/main/res/drawable/bg_receiver.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/bg_sender.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/btn_bg.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/etsendmessage.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/linear_bg.xml" value="0.2085" />
         <entry key="app/src/main/res/layout/activity_chatdetail.xml" value="0.2390625" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2390625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.2390625" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.2390625" />
         <entry key="app/src/main/res/layout/sample_receiver.xml" value="0.25" />
