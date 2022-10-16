@@ -19,13 +19,14 @@
         app:tabMode="fixed"
         app:tabSelectedTextColor="@color/white"
         app:tabTextColor="@color/white"
-        tools:ignore="SpeakableTextPresentCheck" />
+         />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
+        android:layout_below="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="SpeakableTextPresentCheck" />
+        />
 </LinearLayout>
 
 

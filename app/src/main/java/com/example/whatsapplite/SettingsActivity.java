@@ -31,7 +31,7 @@ import java.util.HashMap;
 import java.util.Set;
 
 public class SettingsActivity extends AppCompatActivity {
-ActivitySettingsBinding binding ;
+ActivitySettingsBinding binding;
 FirebaseDatabase database ;
 FirebaseStorage storage ;
 
@@ -58,7 +58,6 @@ FirebaseStorage storage ;
                 Picasso.get().load(user.getProfilepic()).placeholder(R.drawable.profile).into(binding.profileimage);
                 binding.etusername.setText(user.getUsername());
                 binding.etabout.setText(user.getAbout());
-
             }
 
             @Override

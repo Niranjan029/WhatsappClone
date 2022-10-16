@@ -66,8 +66,8 @@ public class ChatdetailActivity extends AppCompatActivity {
         binding.ChatDetailRecyclerView.setAdapter(chatadapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         binding.ChatDetailRecyclerView.setLayoutManager(layoutManager);
-        String SenderRoom = senderId + receiverid;
-        String ReceiverRoom = receiverid + senderId;
+        String SenderRoom = senderId + receiverid ;
+        String ReceiverRoom = receiverid + senderId ;
 
 
         database.getReference().child("chats").child(SenderRoom).addValueEventListener(new ValueEventListener() {
